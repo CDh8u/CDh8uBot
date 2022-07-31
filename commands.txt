@@ -1,0 +1,21 @@
+Normal:
+whoami - Tells whats your CollabVM Nickname.
+github - Leads you to this repo.
+about - Tells you what this bot is about, where its hosted and the credits.
+truth - Tells the truth. Seriously.
+Fun:
+rockpaperscissors - The game itself.
+flipcoin - The game about flipping coins and what coin you flipped on.
+favoritedrinks - The bot's favorite drinks!
+yesorno - Would the bot say yes? Would the bot say no?
+cdh8uoriexist Would the bot pick CDh8u? Would the bot pick iexist?
+Info:
+whoownsthisstupidbot - I think you guys already know.
+hashsending - cdh8u!hash
+cdh8u - Tells you the info of the bot creator!
+since - Tells you what day has it been operating since, month and year.
+version - Tells you the current version of the bot.
+OS:
+macos - Info about MacOS, what the bot thinks about it.
+windows - Info about Windows, what the bot thinks about it.
+linux - Info about Linux, what the bot thinks about it.
