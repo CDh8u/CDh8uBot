@@ -1,4 +1,4 @@
-//cdh8u owns this source code
+//theres no note here but iexist owns the original source code
 var WebSocketClient = require('websocket').client;
 var fs = require('fs')
 var vm2lib = require('vm2')
@@ -6,7 +6,7 @@ var vm2 = new vm2lib.VM({ allowAsync: false });
 var ws = new WebSocketClient();
 var vm = '173.208.172.26:6010';
 var discord = require('discord.js');
-const token = process.env.TOKEN;
+const token = "replace this with your bot token"
 const client = new discord.Client({
   intents: [discord.GatewayIntentBits.Guilds, discord.GatewayIntentBits.GuildMessages],
 });
@@ -35,7 +35,7 @@ client.on("messageCreate", function command(message) {
       message.reply("test");
     }
     if (command == "github") {
-      message.reply("https://github.com/CDh8u/CDh8uBot");
+      message.reply("https://github.com/imightexist/ibot/");
     }
     if (command == "about") {
       message.reply("hosted in replit, source code by ibot");
@@ -125,7 +125,7 @@ function connect() {
     }
     f.on('message', function(message) {
       var cmd = decodeCommand(message.utf8Data);
-      changeUsername("CDh8uBot");
+      changeUsername("CDh8uBotALPHA");
       //console.log(cmd);
       var username = cmd[1];
       let command = cmd[2];
@@ -136,7 +136,7 @@ function connect() {
       //fuck you stupid error
       if (cmd[0] == "chat") {
         console.log(cmd)
-        client.channels.cache.get("(replace this with your own id)").send(cmd[1] + ": " + cmd[2]);
+        client.channels.cache.get("replace this with your own id").send(cmd[1] + ": " + cmd[2]);
         if (username == "CDh8uBot" || banned.includes(username)) {
           return;
         }
@@ -155,10 +155,10 @@ function connect() {
           }
 
           hash = Math.random();
-          client.channels.cache.get("(replace this with your own id)").send("Hash: " + hash.toString());
+          client.channels.cache.get("replace this with your own id").send("Hash: " + hash.toString());
         }
         if (command == prefix + "test") {
-          send("hello world");
+          send("bro");
         }
 
 
@@ -167,14 +167,26 @@ function connect() {
           send("To get started, say cdh8u!commands.");
         }
         if (command == prefix + "commands") {
-          send("This command now operates via GitHub.");
-          send("https://raw.githubusercontent.com/CDh8u/CDh8uBot/main/commands.txt");
+          send("Want normal? cdh8u!commands normal");
+        }
+        if (command == prefix + "commands normal") {
+          send("help, commands, hashsending, whoami, github, about, truth");
+          send("Want fun? cdh8u!commands fun");
+        }
+        if (command == prefix + "commands fun") {
+          send("rockpaperscissors, flipcoin, favoritedrinks, cdh8uoriexist, yesorno");
+          send("Want info? cdh8u!commands info");
+        }
+        if (command == prefix + "commands info") {
+          send("whoownsthisstupidbot, since, cdh8u, version, cdh8udiscord");
+          send("Want OS Related? cdh8u!commands os");
+        }
+        if (command == prefix + "commands os") {
+          send("windows, macos, linux");
+          send("Thats all folks! (for now on)");
         }
         if (command == prefix + "hashsending") {
           send("This bot sends the hashes to discord.");
-        }
-        if (command == prefix + "quotefromcdh8u") {
-          send("i love making stuff, espically when they are bad. -alan inter");
         }
         if (command == prefix + "whoami") {
           send(username);
@@ -184,7 +196,7 @@ function connect() {
           send("https://github.com/CDh8u/CDh8uBot");
         }
         if (command == prefix + "about") {
-          send("hosted in replit, thanks to iexist's ibot for the source code");
+          send("hosted in cdh8u's pc, thanks to iexist's ibot for the source code");
         }
         if (command.startsWith(prefix + "stop ")) {
           if (command.replace(prefix + "stop ", "") == hash.toString()) {
@@ -210,7 +222,7 @@ function connect() {
         }
         if (command == prefix + "hash") {
           hash = Math.random();
-          client.channels.cache.get("(replace this with your own id)").send("Hash: " + hash.toString());
+          client.channels.cache.get("1001892057004114011").send("Hash: " + hash.toString());
           send("Hash sent, Say cdh8u!hashsending for more info.");
         }
         if (command == prefix + "truth") {
@@ -228,7 +240,7 @@ function connect() {
           send("You can also contact him! Discord: CDh8u#5106, Email: thedh8uthing10@outlook.com");
         }
         if (command == prefix + "version") {
-          send("This bot is running v0.1.0 BETA.");
+          send("This bot is testing the ALPHA phase of v0.1.0.");
         }
         if (command == prefix + "favoritedrinks") {
           send("oh collabvm user, i would say my favorite is pepsi!");
@@ -241,6 +253,42 @@ function connect() {
           }
         if (command == prefix + "linux") {
           send("They are the reason why CollabVM exists.");
+          }
+          if (command == prefix + "cdh8udiscord") {
+          send("ok here you go https://discord.gg/G3uNyKENbg");
+          }
+        if (command == prefix + "yippee") {
+          send("yippee");
+          send("https://c.tenor.com/g16jQZqbvWoAAAAC/yippee-happy.gif");
+          }
+        if (command == prefix + "uwu") {
+          send(":)");
+          }
+        if (command == prefix + "bwomp") {
+          send("bwomp, bwomp, bwomp, bwomp bwomp bwomp bwomp bwomp ");
+          }
+        if (command == prefix + "code") {
+          send("You dont have an password yet, Was the chicken in the oven? I dont know.");
+          send("The solution is what number starts with 4 and ends with 0?");
+          }
+        if (command == prefix + "code 420") {
+          send("Break it, Just break it and stop.");
+          }
+        if (command == prefix + "code 69420") {
+          send("Shut up and get in the van!");
+          }
+        if (command == prefix + "code 69421") {
+          send("I didnt actually have the chicken in the oven, I lied.");
+          }
+        if (command == prefix + "pornhub") {
+          send("https://www.youtube.com/watch?v=OfzMvOgyKgU");
+        }
+        if (command == prefix + "music") {
+          send("soundcloud is cdh8u, listen to it");
+        }
+        if (command == prefix + "codebreaker69420") {
+          send("The password for an new command? k sure");
+          send("not. finished.");
           }
         if (command == prefix + "yesorno") {
           random = Math.floor(Math.random() * 2);
@@ -276,7 +324,7 @@ function connect() {
           //send("wow! " + username + " (user) is so utterly retarded! can you believe it?");
 
           hash = Math.random();
-          client.channels.cache.get("(replace this with your own id)").send("Hash: " + hash.toString());
+          client.channels.cache.get("replace this with your own id").send("Hash: " + hash.toString());
           banned.push(command.replace(prefix + "ban " + hash + " ", ""));
           send("User is now blocked from using this bots commands");
         }
@@ -284,7 +332,7 @@ function connect() {
           //send("wow! " + username + " (user) is so utterly retarded! can you believe it?");
 
           hash = Math.random();
-          client.channels.cache.get("(replace this with your own id)").send("Hash: " + hash.toString());
+          client.channels.cache.get("replace this with your own id").send("Hash: " + hash.toString());
           banned = banned.filter(e => e !== command.replace(prefix + "unban " + hash + " ", ""));
           send("User is now unblocked from using this bots commands");
         }
@@ -296,7 +344,7 @@ function connect() {
       }, 2500);
     })
   })
-  ws.connect('ws://(change this to an collabvm vm or an uservm ip)', 'guacamole');
+  ws.connect('ws://173.208.172.26:6004', 'guacamole');
 }
 function decodeCommand(string) {
   /*
@@ -353,4 +401,3 @@ function encodeCommand(cypher) {
   return command;
 }
 connect();
-
